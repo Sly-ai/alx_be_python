@@ -2,7 +2,7 @@ import datetime
 
 year = datetime.date.today().year
 future_years = int(input("How many years into the future do you want to calculate your age: "))
-age = int(input("How old are you: "))
+age = input("How old are you: ")
 def calculate_future_age(age, future_years):
     """Calculate future age based on current age and years into the future."""
     return age + future_years
