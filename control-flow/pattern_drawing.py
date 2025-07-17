@@ -1,9 +1,12 @@
 pattern = int(input("Enter the size of the pattern: "))
+i = 1
+print("Pattern Drawing:")
 
-for i in range(pattern):
-    for j in range(pattern):
-        print("*", end="")
-    print()  # Move to the next line after each row
-print()  # Print an extra line after the pattern
-print("Pattern drawing complete.")
+while i <= pattern :
+    print("*", end="")
+    i += 1
+    for j in range(1,pattern):
+        print("*",end="")
+    print()
+
 
