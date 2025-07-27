@@ -1,7 +1,7 @@
 #This script will define functions to convert temperatures between Celsius and Fahrenheit, demonstrating the use of global variables to store conversion factors that are accessible within functions.
 
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5.0 / 9.0
-CELSIUS_TO_FAHRENHEIT_FACTOR  = 9.0 / 5.0
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR  = 9/5
 
 temperature = float(input("Enter temperature: "))
 unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
