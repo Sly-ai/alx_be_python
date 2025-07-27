@@ -3,7 +3,10 @@
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
 CELSIUS_TO_FAHRENHEIT_FACTOR  = 9/5
 
+# This code defines a temperature conversion tool that converts between Celsius and Fahrenheit based on user input.
 temperature = float(input("Enter the temperature to convert: "))
+if temperature != float(temperature):
+    raise ValueError("Invalid temperature. Please enter a numeric value.")
 unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
 
 def convert_temperature(temperature, unit):
