@@ -21,5 +21,5 @@ def perform_operation (num1, num2, operation):
     return f"Result: {result}"
 
 if __name__ == "__main__":
-    print(perform_operations(0, 0, ''))  # Initial call to trigger user input
+    print(perform_operation(0, 0, ''))  # Initial call to trigger user input
 # This code defines a function to perform basic arithmetic operations based on user input.
