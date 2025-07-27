@@ -1,0 +1,42 @@
+def display_menu():
+    print("Welcome to the Shopping List Manager!")
+    print("1. Add item to shopping list")
+    print("2. Remove item from shopping list")
+    print("3. View shopping list")
+    print("4. Exit")
+
+def main():
+    shopping_list = []
+    
+    while True:
+        print("\n")
+        display_menu()
+        choice = input("Please choose an option (1-4): ").strip()
+        
+        if choice == '1':
+            item = input("Enter the item to add: ").strip()
+            shopping_list.append(item)
+            print(f"'{item}' has been added to your shopping list.")
+        elif choice == '2':
+            print("Current shopping list:")
+            for i, item in enumerate(shopping_list, start=1):
+                print(f"{i}. {item}")
+            item = input("Enter the item to remove: ").strip()
+            if item in shopping_list:
+                shopping_list.remove(item)
+                print(f"'{item}' has been removed from your shopping list.")
+            else:
+                print(f"'{item}' is not in your shopping list.")
+        elif choice == '3':
+            print("Your shopping list:")
+            for i, item in enumerate(shopping_list, start=1):
+                print(f"{i}. {item}")
+            print()
+        elif choice == '4':
+            print("Exiting the Shopping List Manager. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+if __name__ == "__main__":
+    main()
+# This code defines a simple shopping list manager that allows users to add, remove, and view their shopping list items through a command-line interface.
