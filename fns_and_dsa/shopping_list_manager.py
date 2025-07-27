@@ -1,8 +1,8 @@
 def display_menu():
-    print("Welcome to the Shopping List Manager!")
-    print("1. Add item to shopping list")
-    print("2. Remove item from shopping list")
-    print("3. View shopping list")
+    print("Shopping List Manager!")
+    print("1. Add item")
+    print("2. Remove item")
+    print("3. View list")
     print("4. Exit")
 
 def main():
@@ -33,7 +33,7 @@ def main():
                 print(f"{i}. {item}")
             print()
         elif choice == '4':
-            print("Exiting the Shopping List Manager. Goodbye!")
+            print("Goodbye!")
             break
         else:
             print("Invalid choice. Please try again.")
