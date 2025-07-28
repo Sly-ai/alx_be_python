@@ -1,4 +1,5 @@
 def display_menu():
+    """Display the shopping list menu options."""
     print("Shopping List Manager!")
     print("1. Add item")
     print("2. Remove item")
@@ -6,6 +7,7 @@ def display_menu():
     print("4. Exit")
 
 def main():
+    """Main function to run the shopping list manager."""
     shopping_list = []
     
     while True:
@@ -15,8 +17,11 @@ def main():
         
         if choice == '1':
             item = input("Enter the item to add: ").strip()
-            shopping_list.append(item)
-            print(f"'{item}' has been added to your shopping list.")
+            if item:
+                shopping_list.append(item)
+                print(f"'{item}' has been added to your shopping list.")
+            else:
+                print("Item cannot be empty. Please try again.")
         elif choice == '2':
             print("Current shopping list:")
             for i, item in enumerate(shopping_list, start=1):
