@@ -14,5 +14,5 @@ class BankAccount:
         else:
             print(f"Attempted withdrawal of ${amount}. Current balance: ${self.account_balance:.2f}")
             return False
-    def display_balance(self):
+    def current_balance(self):
         print(f"Current balance: ${self.account_balance:.2f}")
