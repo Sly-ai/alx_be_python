@@ -20,7 +20,6 @@ class Library:
         for book in self.__books:
             if book.title == title and not book.is_checked_out:
                 book.is_checked_out = True
-                print(f"Checked out: {book.title}")
                 return
         print(f"Book '{title}' is not available.")
 
@@ -28,7 +27,6 @@ class Library:
         for book in self.__books:
             if book.title == title and book.is_checked_out:
                 book.is_checked_out = False
-                print(f"Returned: {book.title}")
                 return
         print(f"Book '{title}' was not checked out.")
 
