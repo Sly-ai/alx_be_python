@@ -28,9 +28,11 @@ class Library:
         self._books.append(book)
 
     def check_out_book(self, title):
+        title = input("which book: ")
         for book in self._books:
             if book.title == title and book.is_available():
                 book.check_out()
+                print("Book checked out successfully")
                 return
         print(f"Book titled '{title}' is either not in the library or already checked out.")
 
@@ -45,3 +47,16 @@ class Library:
         available = [book for book in self._books if book.is_available()]
         for book in available:
             print(f"{book.title} by {book.author}")
+
+Lib = Library()
+
+while True:
+    title = input("Please enter Title: ")
+    author = input("Please enter Author: ")
+    Lib.add_book(Book(title, author))
+    print("\nAvailable Books:")
+    Lib.list_available_books()
+    try_again = input("Add another book? (Y/N): ").lower()
+    if try_again == "n":
+        break
+Lib.check_out_book(title)
