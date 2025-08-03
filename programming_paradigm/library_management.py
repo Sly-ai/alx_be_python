@@ -32,12 +32,5 @@ class Library:
                 return
         print(f"Book '{title}' was not checked out.")
 
-# library_management.py
-
-library = Library()
-library.add_book(Book("Brave New World", "Aldous Huxley"))
-library.add_book(Book("1984", "George Orwell"))
-
-library.list_available_books()
 
 
