@@ -1,5 +1,12 @@
 class Calculator:
-    calculation_type = "Arithmetic Operations"
+    operations = {
+            "+": "Addition",
+            "-": "Subtraction",
+            "*": "Multiplication",
+            "/": "Division",
+            "%": "Modulo",
+            "**": "Exponentiation"
+        }
 
     @staticmethod
     def add(a, b):
@@ -9,7 +16,6 @@ class Calculator:
     @classmethod
     def multiply(cls, a, b):
         """Return the product of two numbers and print the calculation type."""
-        print(f"Calculation type: {cls.calculation_type}")
         return a * b
 
 
@@ -18,7 +24,9 @@ if __name__ == "__main__":
     # Using the static method
     sum_result = Calculator.add(10, 5)
     print(f"The sum is: {sum_result}")
+    print(f"Calculation type: {Calculator.operations['+']}")
 
     # Using the class method
     product_result = Calculator.multiply(10, 5)
     print(f"The product is: {product_result}")
+    print(f"Calculation type: {Calculator.operations['*']}")
