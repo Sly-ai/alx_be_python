@@ -10,5 +10,13 @@ class Book:
     def __str__(self):
         return f"{self.title} by {self.author}, published in {self.year})"
     def __repr__(self):
-        return f"book('{self.title!r}', '{self.author!r}', '{self.year!r})'"
+        return f"book({self.title!r}, {self.author!r}, {self.year!r})"
 
+def main():
+    my_book = Book("1984", "George Orwell", 1949)
+    
+    print(my_book)
+    print(repr(my_book))
+    del my_book
+if __name__ == "__main__":
+    main()
