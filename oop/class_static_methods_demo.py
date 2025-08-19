@@ -1,12 +1,6 @@
 class Calculator:
-    operations = {
-            "+": "Addition",
-            "-": "Subtraction",
-            "*": "Multiplication",
-            "/": "Division",
-            "%": "Modulo",
-            "**": "Exponentiation"
-        }
+    Calculation_types = "Arithmetic Operations"
+        
 
     @staticmethod
     def add(a, b):
@@ -15,6 +9,7 @@ class Calculator:
 
     @classmethod
     def multiply(cls, a, b):
+        print(f"calculation_type:{cls.Calculation_types}")
         """Return the product of two numbers and print the calculation type."""
         return a * b
 
