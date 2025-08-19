@@ -1,28 +1,22 @@
+# class_static_methods_demo.py
+
 class Calculator:
-    Calculation_type = "Arithmetic Operations"
-        
+    # Class attribute
+    calculation_type = "Arithmetic Operations"
 
     @staticmethod
     def add(a, b):
-        """Return the sum of two numbers."""
+        """
+        Static method to return the sum of two numbers.
+        Does not access class or instance data.
+        """
         return a + b
 
     @classmethod
     def multiply(cls, a, b):
-        print(f"Calculation type: {cls.Calculation_type}")
-        """Return the product of two numbers and print the calculation type."""
+        """
+        Class method to return the product of two numbers.
+        Uses 'cls' to access class attributes.
+        """
+        print(f"Calculation type: {cls.calculation_type}")
         return a * b
-
-
-# Demonstration
-if __name__ == "__main__":
-    # Using the static method
-    sum_result = Calculator.add(10, 5)
-    print(f"The sum is: {sum_result}")
-    
-
-    # Using the class method
-    product_result = Calculator.multiply(10, 5)
-    print(f"The product is: {product_result}")
-
-
