@@ -19,9 +19,10 @@ if __name__ == "__main__":
     # Using the static method
     sum_result = Calculator.add(10, 5)
     print(f"The sum is: {sum_result}")
-    print(f"Calculation type: {Calculator.operations['+']}")
+    print(f"calculation_type:{Calculator.Calculation_types}")
 
     # Using the class method
     product_result = Calculator.multiply(10, 5)
     print(f"The product is: {product_result}")
-    print(f"Calculation type: {Calculator.operations['*']}")
+    print(f"calculation_type:{Calculator.Calculation_types}")
+
